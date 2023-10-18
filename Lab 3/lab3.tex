@@ -1,0 +1,188 @@
+\documentclass[b5paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel} % Język polski
+\usepackage{geometry} % Pakiet do zarządzania geometrią strony
+\usepackage{soul} % Pakiet do podkreśleń
+\usepackage{ulem} % Pakiet do przekreśleń
+\usepackage{setspace} % Pakiet do interlinii
+\usepackage{amsmath} % Pakiet do równań
+\usepackage{graphicx} % Pakiet do grafiki
+\usepackage{xcolor} % Pakiet do kolorów
+\usepackage{hyperref} % Pakiet do linków
+\usepackage{cite} % Pakiet do zarządzania cytowaniami
+
+
+
+\geometry{left=3cm, right=2cm, top=2cm, bottom=2cm}
+
+\begin{document}
+\begin{spacing}{1.5} % Interlinia 1.5
+
+    \section{Zadanie 1 - formatowanie tekstu}
+
+    Możemy zastosować różne style formatowania tekstu, na przykład:
+
+    \textbf{Pogrubienie} - Tekst jest pogrubiony.
+
+    \uline{Podkreślenie} - Tekst jest podkreślony używając pakietu \texttt{ulem}.
+
+    \textit{Kursywa} - Tekst jest kursywą.
+
+    \textbf{\uline{Pogrubienie i podkreślenie}} - Tekst jest jednocześnie pogrubiony i podkreślony.
+
+    \texttt{Typewriter} - Tekst jest w stylu czcionki typewriter.
+
+    \textbf{\textit{Pogrubienie i kursywa}} - Tekst jest jednocześnie pogrubiony i kursywą.
+
+    Możemy także zmieniać rozmiary czcionki, na przykład: {\tiny tekst bardzo mały}, {\scriptsize tekst mniejszy}, {\footnotesize tekst jeszcze mniejszy}, {\small tekst mały}, {\large tekst duży}, {\Large tekst większy}, {\LARGE tekst jeszcze większy}, {\huge tekst bardzo duży}, {\Huge tekst ogromny}.
+
+
+    \newpage
+    \section{Zadanie 2 - równania matematyczne}
+
+    Przykładowe równanie:
+
+    \[
+        \sin^2 x + \cos^2 x = 1
+    \]
+
+    Przykładowe zależności:
+
+    \begin{equation}
+        \gamma^2 + \theta^2 = \omega^2 \label{eq:example1}
+    \end{equation}
+
+    Poniżej przedstawiono równania Maxwella:
+
+    \begin{equation}
+        \vec{\nabla} \cdot \vec{E} = \frac{\rho}{\epsilon_0} \label{eq:maxwell1}
+    \end{equation}
+
+    \begin{equation}
+        \vec{\nabla} \cdot \vec{B} = 0 \label{eq:maxwell2}
+    \end{equation}
+
+    \begin{equation}
+        \vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \label{eq:maxwell3}
+    \end{equation}
+
+    \begin{equation}
+        \vec{\nabla} \times \vec{B} = \mu_0 \left(\epsilon_0 \frac{\partial \vec{E}}{\partial t} + \vec{J}\right) \label{eq:maxwell4}
+    \end{equation}
+
+    Przykładowe odwołania do tych równań:
+
+    Równanie \eqref{eq:example1} wykorzystane zostało do obliczenia pola magnetycznego. Równania \eqref{eq:maxwell1}, \eqref{eq:maxwell2}, \eqref{eq:maxwell3} oraz \eqref{eq:maxwell4} opisują podstawowe prawa elektromagnetyki.
+
+    \newpage
+    \section{Zadanie 3 - równanie macierzowe}
+
+    \begin{equation}
+        \begin{pmatrix}
+            a_{11} & a_{12} & \ldots & a_{1n} \\
+            a_{21} & a_{22} & \ldots & a_{2n} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{n1} & a_{n2} & \ldots & a_{nn} \\
+        \end{pmatrix}
+        \begin{bmatrix}
+            b_{1}  \\
+            b_{2}  \\
+            \vdots \\
+            b_{n}  \\
+        \end{bmatrix}
+        =
+        \begin{matrix}
+            c_{1}  \\
+            c_{2}  \\
+            \vdots \\
+            c_{n}  \\
+        \end{matrix}
+    \end{equation}
+
+    \newpage
+    \section{Zadanie 4 - dodawanie tabel oraz rysunków}
+
+    Poniżej przedstawiono tabelę, która zawiera 4 kolumny i 3 wiersze wypełnione przykładowymi danymi:
+
+    \begin{table}[h]
+        \centering
+        \caption{Obliczenia dla funkcji $f(x) = 4 \cdot x$}
+        \begin{tabular}{|c|c|c|c|}
+            \hline
+            $x$    & 1 & 2 & 3  \\
+            \hline
+            $f(x)$ & 4 & 8 & 12 \\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    W tabeli 2 zestawiono...
+
+    Odwołanie do rysunku poniżej (rys. 1). Aby zachować skalę, szerokość rysunku zostanie ustawiona na połowę globalnej szerokości obszaru tekstowego (\texttt{textwidth}), a następnie rysunek zostanie obrócony o kąt 45°:
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.5\textwidth, angle=45]{images/logotyp-politechnika-opolska-01.jpg} % Zastąp 'example-image.png' nazwą swojego pliku z rysunkiem
+        \caption{Logo uczelniane.}
+    \end{figure}
+
+    \newpage
+    \section{Zadanie 5 - listy numerowane i nienumerowane}
+
+    Przykład listy numerowanej:
+    \begin{enumerate}
+        \item pierwsza
+        \item druga
+        \item trzecia
+    \end{enumerate}
+
+    Przykład listy nienumerowanej:
+    \begin{itemize}
+        \item pierwsza
+        \item druga
+        \item trzecia
+    \end{itemize}
+
+    \newpage
+    \section{Zadanie 6 - formatowanie dokumentu}
+
+    To jest przykład tekstu z przypisem\footnote{To jest treść przypisu.}.
+
+    Odwiedź naszą stronę internetową: \href{https://www.example.com}{www.example.com}
+
+    Skontaktuj się z nami pod adresem: \href{mailto:kontakt@example.com}{kontakt@example.com}
+
+    Przykład~tekstu~z~twardą~spacją.
+
+    To jest \textbf{pogrubiony tekst}.
+
+    To jest \textcolor{red}{czerwony tekst}.
+    \begin{center}
+        To jest tekst wyśrodkowany.
+    \end{center}
+
+    \newpage
+    \section{Zadanie 7 - dodanie literatury}
+
+    Cytowanie 1 \cite{Kowol2009}.
+
+    Cytowanie 2 \cite{Mynarek2011}.
+
+    \bibliographystyle{plain} % Wybierz styl bibliografii
+    \bibliography{literatura} % Wskaż nazwę pliku .bib
+
+    \newpage
+    \section{Zadanie 8 - dodanie spisu treści}
+
+    % Spis treści
+    \tableofcontents
+
+    % Lista tabel
+    \listoftables
+
+    % Lista rysunków
+    \listoffigures
+
+\end{spacing}
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass[polish,10pt,a4paper,oneside]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{babel}
+
+\begin{document}
+
+% title
+\title{Example document}
+\author{Author}
+\date{\today}
+\maketitle
+
+\lipsum[1]
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{example-image-a}
+    \caption[skocont]{Example image}
+    \label{fig:example}
+\end{figure}
+
+\textbf{\lipsum[2]}
+
+\end{document}
